@@ -1,6 +1,7 @@
 const $axios = require('axios')
 const getHash = require('./utils/get-hash')
 const readline = require('readline')
+const ip = require('ip')
 
 module.exports = class Client {
   constructor({ node }) {

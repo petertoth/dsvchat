@@ -25,7 +25,7 @@ module.exports = class Server {
     }
 
     const server = http.createServer(requestHandler)
-    server.listen(this.port, this.address, (err) => {
+    server.listen(this.port, '0.0.0.0', (err) => {
       if (err) return console.log('Something bad happened', err)
       this.node.log(`Server is listening on port ${port}`)
     }) 

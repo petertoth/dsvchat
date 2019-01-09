@@ -1,6 +1,7 @@
 const Server = require('./server')
 const Client = require('./client')
 const getHash = require('./utils/get-hash')
+const ipaddr = require('ip')
 
 module.exports = class Node {
   constructor({ address, port, rightIp, leftIp, leader, leaderIp }) {
@@ -29,7 +30,7 @@ module.exports = class Node {
   }
 
   ip() {
-    return `${this.address}:${this.port}`
+    return `${ipaddr.address()}:${this.port}`
   }
 
   setRightIp(ip) {
